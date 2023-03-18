@@ -10,6 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:text="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.gigamole.quatrograde.QuatroGradeView
             android:id="@+id/default_quatro_grade_view"
             android:layout_width="0dp"
@@ -31,7 +41,6 @@
             app:layout_constraintTop_toBottomOf="@+id/default_quatro_grade_view">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/btnTopLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -39,7 +48,8 @@
                 app:cardBackgroundColor="#F6F5F5"
                 app:cardCornerRadius="10dp">
 
-                <TextView
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTopLeft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -47,14 +57,13 @@
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"
                     android:paddingBottom="10dp"
-                    android:text="Góc Trên - Trái"
+                    android:text="Trên - Trái"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="30dp" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/btnTopRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -62,7 +71,8 @@
                 app:cardBackgroundColor="#F6F5F5"
                 app:cardCornerRadius="10dp">
 
-                <TextView
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTopRight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -70,14 +80,13 @@
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"
                     android:paddingBottom="10dp"
-                    android:text="Góc Trên - Phải"
+                    android:text="Trên - Phải"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="30dp" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/btnBottomLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -85,7 +94,8 @@
                 app:cardBackgroundColor="#F6F5F5"
                 app:cardCornerRadius="10dp">
 
-                <TextView
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBottomLeft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -93,14 +103,13 @@
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"
                     android:paddingBottom="10dp"
-                    android:text="Góc Dưới - Trái"
+                    android:text="Dưới - Trái"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="30dp" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/btnBottomRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -108,7 +117,8 @@
                 app:cardBackgroundColor="#F6F5F5"
                 app:cardCornerRadius="10dp">
 
-                <TextView
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBottomRight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -116,36 +126,11 @@
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"
                     android:paddingBottom="10dp"
-                    android:text="Góc Dưới - Phải"
+                    android:text="Dưới - Phải"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="30dp" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnColor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#F80303"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingLeft="60dp"
-                android:paddingTop="10dp"
-                android:paddingRight="60dp"
-                android:paddingBottom="10dp"
-                android:text="CẬP NHẬT HÌNH NỀN"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="30dp" />
-        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

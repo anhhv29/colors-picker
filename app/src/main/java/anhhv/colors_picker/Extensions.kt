@@ -4,8 +4,10 @@ import android.app.Activity
 import android.view.View
 import androidx.annotation.ColorInt
 import anhhv.colors_picker.databinding.LayoutColorPickerBinding
+import codes.side.andcolorpicker.converter.ContrastColorAlphaMode
 import codes.side.andcolorpicker.converter.setFromColorInt
 import codes.side.andcolorpicker.converter.toColorInt
+import codes.side.andcolorpicker.converter.toContrastColor
 import codes.side.andcolorpicker.group.PickerGroup
 import codes.side.andcolorpicker.group.registerPickers
 import codes.side.andcolorpicker.model.IntegerHSLColor
@@ -13,6 +15,7 @@ import codes.side.andcolorpicker.view.picker.ColorSeekBar
 import codes.side.andcolorpicker.view.picker.OnIntegerHSLColorPickListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.button.MaterialButton
 
 fun Activity.showColorPickerBottomSheet(
     @ColorInt color: Int,
@@ -48,12 +51,15 @@ fun Activity.showColorPickerBottomSheet(
     binding.colorPickerButtonRandomColor.setOnClickListener {
         group.setColor(randomHSLColor())
     }
+
+    binding.btnConfirm.setOnClickListener {
+        bottomSheetDialog.hide()
+    }
+
     bottomSheetDialog.behavior.maxWidth = window.decorView.width
     bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
     bottomSheetDialog.show()
-
 }
-
 
 fun Activity.showSingleColorPickerBottomSheet(
     @ColorInt color: Int,
@@ -87,10 +93,24 @@ fun Activity.showSingleColorPickerBottomSheet(
             }
         }
     )
+
+    binding.btnConfirm.setOnClickListener {
+        bottomSheetDialog.hide()
+    }
+
     group.setColor(IntegerHSLColor().apply { setFromColorInt(color) })
     bottomSheetDialog.behavior.maxWidth = window.decorView.width
     bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
     bottomSheetDialog.show()
+}
+
+fun MaterialButton.setBackgroundAndContrastColors(@ColorInt color: Int) {
+    setBackgroundColor(color)
+    setTextColor(
+        IntegerHSLColor().apply {
+            setFromColorInt(color)
+        }.toContrastColor(ContrastColorAlphaMode.LIGHT_BACKGROUND)
+    )
 }
 
 fun randomHSLColor(pure: Boolean = false) = IntegerHSLColor.createRandomColor(pure)

@@ -16,6 +16,7 @@
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="3:1"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:qgv_colors="@array/default_colors" />
@@ -43,6 +44,16 @@
                 android:textAllCaps="false"
                 android:textSize="30dp" />
         </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/color_picker_button_random_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="Random color"
+            app:layout_constraintBottom_toBottomOf="@+id/btnChange"
+            app:layout_constraintStart_toEndOf="@+id/btnChange"
+            app:layout_constraintTop_toTopOf="@+id/btnChange" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnColor"

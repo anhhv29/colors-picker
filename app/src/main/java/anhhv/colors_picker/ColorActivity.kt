@@ -2,7 +2,7 @@ package anhhv.colors_picker
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
+import androidx.appcompat.widget.AppCompatButton
 import anhhv.colors_picker.databinding.ActivityColorBinding
 
 class ColorActivity : AppCompatActivity() {
@@ -19,6 +19,10 @@ class ColorActivity : AppCompatActivity() {
         binding = ActivityColorBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupUi()
+
+        binding.btnBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun setupUi() {
@@ -29,7 +33,7 @@ class ColorActivity : AppCompatActivity() {
         invalidateColors()
     }
 
-    private fun setupButton(button: CardView, index: Int) {
+    private fun setupButton(button: AppCompatButton, index: Int) {
         button.setOnClickListener {
             showColorPickerBottomSheet(colors[index]) { color ->
                 colors[index] = color
@@ -40,5 +44,10 @@ class ColorActivity : AppCompatActivity() {
 
     private fun invalidateColors() {
         binding.defaultQuatroGradeView.setColors(colors)
+
+        binding.btnTopLeft.setBackgroundAndContrastColors(colors[0])
+        binding.btnTopRight.setBackgroundAndContrastColors(colors[1])
+        binding.btnBottomLeft.setBackgroundAndContrastColors(colors[2])
+        binding.btnBottomRight.setBackgroundAndContrastColors(colors[3])
     }
 }
