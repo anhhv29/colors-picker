@@ -70,8 +70,8 @@ fun Activity.showSingleColorPickerBottomSheet(
     val bottomSheetDialog = BottomSheetDialog(this)
     bottomSheetDialog.setContentView(binding.root)
 
-    binding.colorPickerSaturation.visibility = View.GONE
     binding.colorPickerLightness.visibility = View.GONE
+    binding.colorPickerAlpha.visibility = View.GONE
     binding.colorPickerButtonRandomColor.visibility = View.GONE
     val group = PickerGroup<IntegerHSLColor>().also {
         it.registerPickers(

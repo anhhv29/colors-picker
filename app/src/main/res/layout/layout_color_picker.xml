@@ -96,7 +96,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-
             android:weightSum="1">
 
             <TextView
@@ -147,6 +146,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Xác nhận"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
     </LinearLayout>
 </LinearLayout>
