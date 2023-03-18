@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupUi() {
         binding.btnSingle.setOnClickListener {
             startActivity(Intent(this, SingleActivity::class.java))
+            finish()
         }
         binding.btnColor.setOnClickListener {
             startActivity(Intent(this, ColorActivity::class.java))

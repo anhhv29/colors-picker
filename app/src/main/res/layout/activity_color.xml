@@ -33,104 +33,56 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="72dp"
             android:layout_marginTop="30dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/default_quatro_grade_view">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="#F6F5F5"
-                app:cardCornerRadius="10dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTopLeft"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="TL"
+                app:cornerRadius="30dp"
+                app:strokeColor="#FF000000"
+                app:strokeWidth="4dp" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnTopLeft"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="30dp"
-                    android:paddingBottom="10dp"
-                    android:text="Trên - Trái"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTopRight"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="TR"
+                app:cornerRadius="30dp"
+                app:strokeColor="#FF000000"
+                app:strokeWidth="4dp" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="#F6F5F5"
-                app:cardCornerRadius="10dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBottomLeft"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="BL"
+                app:cornerRadius="30dp"
+                app:strokeColor="#FF000000"
+                app:strokeWidth="4dp" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnTopRight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="30dp"
-                    android:paddingBottom="10dp"
-                    android:text="Trên - Phải"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="#F6F5F5"
-                app:cardCornerRadius="10dp">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnBottomLeft"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="30dp"
-                    android:paddingBottom="10dp"
-                    android:text="Dưới - Trái"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:cardBackgroundColor="#F6F5F5"
-                app:cardCornerRadius="10dp">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnBottomRight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="30dp"
-                    android:paddingBottom="10dp"
-                    android:text="Dưới - Phải"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBottomRight"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="BR"
+                app:cornerRadius="30dp"
+                app:strokeColor="#FF000000"
+                app:strokeWidth="4dp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
