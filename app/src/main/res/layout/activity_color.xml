@@ -84,5 +84,17 @@
                 app:strokeColor="#FF000000"
                 app:strokeWidth="4dp" />
         </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnB"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="28dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

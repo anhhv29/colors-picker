@@ -1,13 +1,12 @@
 package anhhv.colors_picker
 
 import android.app.Activity
+import android.graphics.drawable.ColorDrawable
 import android.view.View
 import androidx.annotation.ColorInt
 import anhhv.colors_picker.databinding.LayoutColorPickerBinding
-import codes.side.andcolorpicker.converter.ContrastColorAlphaMode
 import codes.side.andcolorpicker.converter.setFromColorInt
 import codes.side.andcolorpicker.converter.toColorInt
-import codes.side.andcolorpicker.converter.toContrastColor
 import codes.side.andcolorpicker.group.PickerGroup
 import codes.side.andcolorpicker.group.registerPickers
 import codes.side.andcolorpicker.model.IntegerHSLColor
@@ -16,6 +15,8 @@ import codes.side.andcolorpicker.view.picker.OnIntegerHSLColorPickListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
+import de.hdodenhof.circleimageview.CircleImageView
+
 
 fun Activity.showColorPickerBottomSheet(
     @ColorInt color: Int,
@@ -106,11 +107,16 @@ fun Activity.showSingleColorPickerBottomSheet(
 
 fun MaterialButton.setBackgroundAndContrastColors(@ColorInt color: Int) {
     setBackgroundColor(color)
-    setTextColor(
-        IntegerHSLColor().apply {
-            setFromColorInt(color)
-        }.toContrastColor(ContrastColorAlphaMode.LIGHT_BACKGROUND)
-    )
+//    setTextColor(
+//        IntegerHSLColor().apply {
+//            setFromColorInt(color)
+//        }.toContrastColor(ContrastColorAlphaMode.LIGHT_BACKGROUND)
+//    )
+}
+
+fun CircleImageView.setBackgroundAndContrastColors(@ColorInt color: Int) {
+    val cd = ColorDrawable(color)
+    setImageDrawable(cd)
 }
 
 fun randomHSLColor(pure: Boolean = false) = IntegerHSLColor.createRandomColor(pure)

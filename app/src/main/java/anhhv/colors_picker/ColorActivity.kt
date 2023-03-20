@@ -49,5 +49,7 @@ class ColorActivity : AppCompatActivity() {
         binding.btnTopRight.setBackgroundAndContrastColors(colors[1])
         binding.btnBottomLeft.setBackgroundAndContrastColors(colors[2])
         binding.btnBottomRight.setBackgroundAndContrastColors(colors[3])
+
+        binding.btnB.setBackgroundAndContrastColors(colors[0])
     }
 }
