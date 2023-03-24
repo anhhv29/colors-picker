@@ -3,11 +3,14 @@ package anhhv.colors_picker
 import android.app.Activity
 import android.app.WallpaperManager
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import anhhv.colors_picker.databinding.ActivitySingleBinding
+import java.io.File
+import java.io.FileOutputStream
 import java.util.*
 
 @Suppress("DEPRECATION")
@@ -54,7 +57,14 @@ class SingleActivity : AppCompatActivity() {
             v1.isDrawingCacheEnabled = true
             val bitmap: Bitmap = Bitmap.createBitmap(v1.drawingCache)
             v1.isDrawingCacheEnabled = false
-            WallpaperManager.getInstance(applicationContext).setBitmap(bitmap)
+
+            val wallpaperManager = WallpaperManager.getInstance(applicationContext)
+            val out = FileOutputStream("/sdcard/mypicture")
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, out)
+            out.close()
+            val pngFile = File("/sdcard/mypicture")
+            wallpaperManager.setBitmap(BitmapFactory.decodeFile(pngFile.absolutePath))
+//            WallpaperManager.getInstance(applicationContext).setBitmap(bitmap)
             setResult(Activity.RESULT_OK)
             finish()
         })
