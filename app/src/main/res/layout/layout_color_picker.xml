@@ -9,17 +9,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="20dp"
+        android:layout_margin="20dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/color_picker_hue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="100dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:weightSum="1">
@@ -27,16 +24,15 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.3"
                 android:text="Màu sắc"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textColor="@color/black" />
 
             <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
                 android:id="@+id/color_picker_hue_seek_bar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"
+                android:layout_weight="0.7"
                 app:hslMode="hue"
                 tools:ignore="MissingClass" />
         </LinearLayout>
@@ -52,16 +48,15 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.3"
                 android:text="Độ bão hoà"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textColor="@color/black" />
 
             <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
                 android:id="@+id/color_picker_saturation_seek_bar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"
+                android:layout_weight="0.7"
                 app:hslMode="saturation" />
         </LinearLayout>
 
@@ -71,22 +66,20 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-
             android:weightSum="1">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.3"
                 android:text="Độ sáng"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textColor="@color/black" />
 
             <codes.side.andcolorpicker.hsl.HSLColorPickerSeekBar
                 android:id="@+id/color_picker_lightness_seek_bar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"
+                android:layout_weight="0.7"
                 app:hslMode="lightness" />
         </LinearLayout>
 
@@ -101,16 +94,15 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
+                android:layout_weight="0.3"
                 android:text="Độ trong suốt"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textColor="@color/black" />
 
             <codes.side.andcolorpicker.alpha.HSLAlphaColorPickerSeekBar
                 android:id="@+id/color_picker_alpha_seek_bar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8" />
+                android:layout_weight="0.7" />
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
@@ -118,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
+            android:layout_marginVertical="30dp"
             app:cardBackgroundColor="#F80303"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -130,14 +122,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingLeft="60dp"
-                android:paddingTop="10dp"
-                android:paddingRight="60dp"
-                android:paddingBottom="10dp"
+                android:padding="10dp"
                 android:text="Chọn màu ngẫu nhiên"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textColor="@color/white" />
         </androidx.cardview.widget.CardView>
 
         <androidx.appcompat.widget.AppCompatButton

@@ -14,7 +14,7 @@
             android:id="@+id/default_quatro_grade_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,22 +36,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingLeft="30dp"
+                android:paddingLeft="20dp"
                 android:paddingTop="10dp"
-                android:paddingRight="30dp"
+                android:paddingRight="20dp"
                 android:paddingBottom="10dp"
                 android:text="Chọn màu hình nền"
-                android:textAllCaps="false"
-                android:textSize="30dp" />
+                android:textAllCaps="false" />
         </androidx.cardview.widget.CardView>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/color_picker_button_random_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
             android:text="Random color"
             app:layout_constraintBottom_toBottomOf="@+id/btnChange"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnChange"
             app:layout_constraintTop_toTopOf="@+id/btnChange" />
 
@@ -70,14 +69,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingLeft="60dp"
+                android:paddingLeft="50dp"
                 android:paddingTop="6dp"
-                android:paddingRight="60dp"
+                android:paddingRight="50dp"
                 android:paddingBottom="6dp"
                 android:text="CẬP NHẬT HÌNH NỀN"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="30dp" />
+                android:textColor="@color/white" />
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

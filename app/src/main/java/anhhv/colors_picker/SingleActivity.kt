@@ -9,7 +9,6 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
-import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
@@ -18,16 +17,15 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.Settings
-import android.util.DisplayMetrics
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import anhhv.colors_picker.databinding.ActivityColorBinding
 import anhhv.colors_picker.databinding.ActivitySingleBinding
 import java.io.File
 import java.io.FileOutputStream
-import java.util.*
+import java.util.Random
 
 @Suppress("DEPRECATION")
 class SingleActivity : AppCompatActivity() {
@@ -127,7 +125,7 @@ class SingleActivity : AppCompatActivity() {
         out.close()
         val pngFile = File("${commonDocumentDirPath(this)}/single.png")
         wallpaperManager.setBitmap(BitmapFactory.decodeFile(pngFile.absolutePath))
-//            WallpaperManager.getInstance(applicationContext).setBitmap(bitmap)
+        WallpaperManager.getInstance(applicationContext).setBitmap(bitmap)
         setResult(Activity.RESULT_OK)
         finish()
     }
@@ -146,11 +144,11 @@ class SingleActivity : AppCompatActivity() {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
             )
         ) {
-//            Toast.makeText(
-//                this,
-//                "Vui lòng cho phép quyền bộ nhớ ngoài trong Cài đặt ứng dụng",
-//                Toast.LENGTH_LONG
-//            ).show()
+            Toast.makeText(
+                this,
+                "Vui lòng cho phép quyền bộ nhớ ngoài trong Cài đặt ứng dụng",
+                Toast.LENGTH_LONG
+            ).show()
             alertDialog()
         } else {
             ActivityCompat.requestPermissions(

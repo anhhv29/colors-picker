@@ -8,14 +8,14 @@
         android:id="@+id/btnSingle"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Hình nền đơn sắc"
+        android:text="Thay đổi hình nền"
         android:textAllCaps="false" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnColor"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Hình nền đa sắc"
+        android:text="Màu đa sắc"
         android:textAllCaps="false" />
 
     <androidx.constraintlayout.helper.widget.Flow
